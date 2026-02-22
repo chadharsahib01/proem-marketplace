@@ -2,7 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+}
+
 body {
-  background-color: #fcfcfc;
-  color: #0f172a;
+  color: rgb(var(--foreground-rgb));
+  background: #F8FAFC;
+  -webkit-font-smoothing: antialiased;
+}
+
+.premium-card {
+  background: white;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  border-color: rgba(37, 99, 235, 0.2);
 }
